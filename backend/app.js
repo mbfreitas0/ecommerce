@@ -2,11 +2,11 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const router = require("./routes/book-routes");
-//const cors = require("cors");
+const cors = require("cors");
 const app = express();
 
 app.use(express.json());
-//app.use(cors());
+app.use(cors());
 
 //Middlewares
 app.use("/books", router); //localhost:5000/books

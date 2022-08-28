@@ -9,9 +9,11 @@ const Header = () => {
     <div>
       <AppBar sx={{ backgroundColor: "#232f3d" }} position="sticky">
         <Toolbar>
-          <Typography>
-            <LibraryBooksOutlinedIcon />
-          </Typography>
+          <NavLink to="/" style={{ color: "write" }}>
+            <Typography>
+              <LibraryBooksOutlinedIcon />
+            </Typography>
+          </NavLink>
           <Tabs
             sx={{ ml: "auto" }}
             textColor="inherit"
@@ -21,7 +23,7 @@ const Header = () => {
           >
             <Tab LinkComponent={NavLink} to="/add" label="Add product" />
             <Tab LinkComponent={NavLink} to="/books" label="Books" />
-            <Tab LinkComponent={NavLink} to="/books" label="About us" />
+            <Tab LinkComponent={NavLink} to="/about" label="About us" />
           </Tabs>
         </Toolbar>
       </AppBar>
